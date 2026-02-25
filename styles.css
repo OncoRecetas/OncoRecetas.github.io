@@ -404,8 +404,8 @@ body {
 
 /* ===== VEGANO SECTION ===== */
 .vegano-section {
-    /*background: linear-gradient(135deg, #d5cab1, #a5d4b4,#95e7b9b3);*/
-    background: white;
+    background: linear-gradient(135deg, #e5dece, #c6dece,#bee7d0b3);
+    /*background: white;*/
     color: #333;
 }
 
@@ -1267,4 +1267,5 @@ body {
     .search-result {
         padding: 15px;
     }
+
 }
