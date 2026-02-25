@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐟 Salmón al Horno con Camote | OncoRecetas</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Corrección crítica: Elimina espacios en URLs y centra el título */
+        .recipe-hero {
+            background: linear-gradient(rgba(231, 29, 54, 0.9), rgba(184, 20, 40, 0.9)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') center/cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .recipe-hero h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* ===== CORRECCIÓN: SOLO CHECKMARKS (SIN PUNTOS) ===== */
+        .ingredients-list {
+            padding-left: 0;
+            list-style: none; /* ¡ESTO ELIMINA LOS PUNTOS! */
+        }
+        
+        .ingredients-list li {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .ingredients-list li::before {
+            content: "✓";
+            color: var(--color-primary);
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .preparation-steps {
+            padding-left: 0;
+            list-style: none; /* ¡ESTO ELIMINA LOS PUNTOS! */
+        }
+        
+        .preparation-steps li {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .preparation-steps li::before {
+            content: "✓";
+            color: var(--color-primary);
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        /* ===== BOTÓN DE IMPRIMIR ===== */
+        .print-btn {
+            background: linear-gradient(135deg, var(--color-primary), #B81428);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin: 20px 0;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(231, 29, 54, 0.4);
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(231, 29, 54, 0.5);
+            background: linear-gradient(135deg, #C62828, #9E0000);
+        }
+        
+        /* ===== ESTILO PARA IMPRESIÓN ===== */
+        @media print {
+            .header, .footer, .navbar, .print-btn, .recipe-hero {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            
+            .recipe-info {
+                padding: 20px !important;
+                margin: 0 !important;
+            }
+            
+            .nutrition-info, .tips-box {
+                page-break-inside: avoid;
+            }
+            
+            h1, h2, h3 {
+                color: #333 !important;
+            }
+            
+            .recipe-image {
+                max-width: 100% !important;
+                height: auto !important;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER CORREGIDO -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <h1>OncoRecetas</h1>
+                <p class="tagline">Nutrición con corazón</p>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                    <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                    <li><a href="../index.html#prevencion">Prevención</a></li>
+                    <li><a href="../index.html#recetas">Todas las recetas</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO CORREGIDO -->
+    <section class="recipe-hero">
+        <h1>🐟 Salmón al Horno con Camote</h1>
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 15px auto;">
+            Omega-3 y fibra. Excelente para colon saludable.
+        </p>
+        
+        <div style="background: rgba(255,255,255,0.2); display: inline-block; padding: 15px 30px; border-radius: 25px; margin-top: 20px;">
+            <span class="price-tag especial">💰 S/ 35.00 💲💲💲</span>
+            <p style="margin: 10px 0 0 0; font-size: 1rem;">⏱️ 45 min • 👥 2 porciones</p>
+        </div>
+    </section>
+
+    <!-- BOTÓN DE IMPRIMIR -->
+    <section class="section" style="background-color: white; text-align: center;">
+        <div class="container">
+            <button class="print-btn" onclick="window.print()">
+                🖨️ Imprimir Receta
+            </button>
+        </div>
+    </section>
+
+    <!-- IMAGEN DE LA RECETA -->
+    <section class="section" style="background-color: white; text-align: center; padding: 0.5rem 0; margin: 0;">
+    <div class="container" style="padding: 0; margin: 0;">
+        <img src="imagenes/salmon.png" alt="Salmón al Horno" class="recipe-image" 
+             style="width: 50%; max-width: 700px; height: auto; display: block; margin: 0 auto;">
+    </div>
+    </section>
+
+    <!-- INGREDIENTES -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div class="recipe-info">
+                <h2>📋 Ingredientes</h2>
+                <ul class="ingredients-list">
+                    <li><strong>2</strong> filetes de salmón (200g cada uno)</li>
+                    <li><strong>2</strong> camotes medianos pelados y cortados en rodajas</li>
+                    <li><strong>2</strong> cucharadas de aceite de oliva</li>
+                    <li><strong>1</strong> cucharadita de ajo en polvo</li>
+                    <li><strong>1</strong> cucharadita de pimentón</li>
+                    <li><strong>1</strong> cucharadita de hierbas provenzales</li>
+                    <li><strong>1</strong> limón (para el jugo)</li>
+                    <li><strong>Sal y pimienta</strong> al gusto</li>
+                    <li><strong>1</strong> manojo de perejil fresco (para decorar)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREPARACIÓN -->
+    <section class="section">
+        <div class="container">
+            <div class="recipe-info">
+                <h2>👩‍🍳 Preparación</h2>
+                <ul class="preparation-steps">
+                    <li><strong>Preparar camote:</strong> En una bandeja para horno, coloca las rodajas de camote. Rocía con 1 cucharada de aceite de oliva, sal y pimienta. Hornea a 200°C por 20 minutos.</li>
+                    <li><strong>Marinar salmón:</strong> En un recipiente, mezcla el ajo en polvo, pimentón, hierbas provenzales, jugo de limón, sal, pimienta y el resto del aceite de oliva. Añade los filetes de salmón y deja marinar 15 minutos.</li>
+                    <li><strong>Cocinar salmón:</strong> Coloca el salmón en la bandeja junto con los camotes. Hornea a 200°C por 15-20 minutos, hasta que el salmón esté cocido y los camotes estén tiernos.</li>
+                    <li><strong>Finalizar:</strong> Retira del horno y deja reposar 5 minutos. Decora con perejil fresco. Sirve caliente.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMACIÓN NUTRICIONAL -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div class="nutrition-info">
+                <h3>💪 Información Nutricional (por porción)</h3>
+                <div class="nutrition-grid">
+                    <div class="nutrition-item">
+                        <strong>420 kcal</strong>
+                        <span>Calorías</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <strong>28g</strong>
+                        <span>Proteínas</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <strong>25g</strong>
+                        <span>Grasas</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <strong>20g</strong>
+                        <span>Carbohidratos</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <strong>5g</strong>
+                        <span>Fibra</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <strong>15mg</strong>
+                        <span>Vitamina C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="section">
+        <div class="container">
+            <div class="tips-box">
+                <h3>🌟 Beneficios para Pacientes con Cáncer</h3>
+                <ul>
+                    <li><strong>Omega-3:</strong> Reduce la inflamación y ayuda a mantener la masa muscular.</li>
+                    <li><strong>Fibra:</strong> Ayuda a mantener la regularidad intestinal.</li>
+                    <li><strong>Vitamina A:</strong> El camote aporta vitamina A, importante para la salud inmunológica.</li>
+                    <li><strong>Antioxidantes:</strong> El perejil aporta antioxidantes que combaten el daño celular.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSEJOS -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div class="tips-box">
+                <h3>💡 Consejos y Variaciones</h3>
+                <ul>
+                    <li>Si tienes mucositis, cocina el salmón al vapor en lugar de al horno.</li>
+                    <li>Para días sin apetito, prepara una porción y congela el resto para otro día.</li>
+                    <li>Si no tienes camote, usa zanahoria o calabaza.</li>
+                    <li>Para mayor valor nutricional, añade un poco de brócoli al final de la cocción.</li>
+                    <li>Si necesitas más proteínas, añade un poco de quinoa cocida a la bandeja.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CORREGIDO -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">❤️</span>
+                    <h3>OncoRecetas</h3>
+                    <p>Nutrición con corazón</p>
+                    <div class="footer-contact">
+                        <a href="https://wa.me/51952724874" target="_blank" class="footer-whatsapp">
+                            💬 WhatsApp: 952 724 874
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="footer-email">
+                            📧 oncorecetas.lcc@gmail.com
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                        <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                        <li><a href="../index.html#prevencion">Prevención</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Información</h4>
+                    <p>📍 Perú</p>
+                    <p>📧 oncorecetas.lcc@gmail.com</p>
+                    <p>💬 WhatsApp: 952 724 874</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1CH7q8jcSw/" target="_blank" class="social-btn facebook">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@oncorecetas.lcc" target="_blank" class="social-btn tiktok">
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://wa.me/51952724874" target="_blank" class="social-btn whatsapp">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="social-btn email">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 OncoRecetas. Todos los derechos reservados.</p>
+                <p style="margin-top: 8px; font-size: 0.9rem; opacity: 0.7;">
+                    💙 Proyecto creado con amor para acompañarte en tu camino hacia la salud
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>

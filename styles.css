@@ -1,0 +1,1270 @@
+/* ===== VARIABLES Y RESET ===== */
+:root {
+    --color-primary: #E71D36;
+    --color-secondary: #27AE60;
+    --color-accent: #F39C12;
+    --color-dark: #333333;
+    --color-light: #FFF9F0;
+    --color-white: #FFFFFF;
+    --blue-primary: #2563EB;
+    --blue-secondary: #1D4ED8;
+    --blue-light: #DBEAFE;
+    --blue-dark: #1E3A8A;
+    --price-economico: #27AE60;
+    --price-balanceado: #F39C12;
+    --price-especial: #E71D36;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER CON LOGO DE ALIADO ===== */
+.header {
+    background: linear-gradient(135deg, #E71D36 0%, #C62828 100%);
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* ===== BURBUJA CHATBOT - LIGA CONTRA EL CÁNCER (MODIFICADO) ===== */
+.aliado-logo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    animation: float-bubble 3s ease-in-out infinite;
+}
+
+.aliado-logo a {
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.aliado-logo a:hover {
+    transform: scale(1.1);
+}
+
+.aliado-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: white;
+    padding: 6px;
+    box-shadow: 0 6px 20px rgba(231, 29, 54, 0.5);
+    border: 3px solid white;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+    transition: all 0.3s ease;
+}
+
+.aliado-logo:hover img {
+    box-shadow: 0 8px 25px rgba(231, 29, 54, 0.7);
+    transform: scale(1.05);
+}
+
+/* Animación de flotación */
+@keyframes float-bubble {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Tooltip informativo */
+.aliado-logo::after {
+    content: "Liga contra el Cáncer";
+    position: absolute;
+    bottom: 110%;
+    right: 0;
+    background: #E71D36;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.aliado-logo:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: 115%;
+}
+
+/* Responsive - Móviles */
+@media (max-width: 768px) {
+    .aliado-logo {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .aliado-logo img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aliado-logo img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Logo principal centrado */
+.logo {
+    text-align: center;
+    margin: 15px 0 20px 0;
+}
+
+.logo-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.logo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.tagline {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    margin: 5px 0 0 0;
+    opacity: 0.95;
+}
+
+/* Navegación */
+.navbar {
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    display: block;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* ===== BARRA DE NAVEGACIÓN FIJA ===== */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, var(--color-primary), #B81428);
+    z-index: 999;
+    padding: 8px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.navbar-fixed.show {
+    opacity: 1;
+    transform: translateY(0);
+    height: 50px;
+}
+
+.navbar-fixed .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-fixed ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar-fixed a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.navbar-fixed a:hover,
+.navbar-fixed a.active {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ===== LIGA CONTRA EL CÁNCER ===== */
+.ligacontraelcancer {
+    padding: 40px 0;
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.ligacontraelcancer img {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    max-width: 30%;
+    height: auto;
+}
+
+.ligacontraelcancer img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* ===== SECTION STYLES ===== */
+.section {
+    padding: 60px 0;
+    background-color: var(--color-white);
+}
+
+.section h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.section-desc {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ===== TESTIMONIOS ===== */
+.testimonios-section {
+    background: linear-gradient(135deg, #e05c6c, #dc858f);
+    color: var(--color-white);
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonio-card {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.2);
+    transition: var(--transition);
+}
+
+.testimonio-card:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-5px);
+}
+
+.testimonio-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonio-content p {
+    position: relative;
+    padding-left: 20px;
+}
+
+.testimonio-content p::before {
+    content: '"';
+    font-size: 3rem;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    opacity: 0.3;
+    font-family: Georgia, serif;
+}
+
+.testimonio-author strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.testimonio-author p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ===== CÁNCER TYPES ===== */
+.cancer-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.cancer-card {
+    background: linear-gradient(135deg, var(--color-primary), #B81428);
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: var(--transition);
+    display: block;
+}
+
+.cancer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #C62828, #9E0000);
+}
+
+.cancer-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.cancer-card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* ===== VEGANO SECTION ===== */
+.vegano-section {
+    /*background: linear-gradient(135deg, #d5cab1, #a5d4b4,#95e7b9b3);*/
+    background: white;
+    color: #333;
+}
+
+.vegano-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.vegano-item {
+    background: rgb(209, 248, 224);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.vegano-item:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+}
+
+.vegano-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.vegano-item p {
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+/* ===== PREVENCIÓN ===== */
+.prevencion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    justify-content: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prevencion-card {
+    background: #c2c3ff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-left: 4px solid var(--color-secondary);
+    text-decoration: none;
+    color: var(--color-dark);
+    display: block;
+}
+
+.prevencion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.prevencion-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.prevencion-card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* ===== FILTERS ===== */
+.filters {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+    color: var(--color-primary);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    background: var(--color-white);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+.filter-btn.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(231, 29, 54, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ===== RECIPES GRID ===== */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.recipe-card {
+    background: var(--color-white);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    border-color: var(--color-primary);
+}
+
+.recipe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.recipe-header h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: var(--color-dark);
+}
+
+.recipe-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.recipe-desc {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.btn-detail {
+    display: inline-block;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 2px solid var(--color-primary);
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.btn-detail:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* ===== PRICE TAGS ===== */
+.price-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-left: 10px;
+}
+
+.price-tag.economico {
+    background: #E8F5E9;
+    color: var(--price-economico);
+}
+
+.price-tag.balanceado {
+    background: #FFF3E0;
+    color: var(--price-balanceado);
+}
+
+.price-tag.especial {
+    background: #FFEBEE;
+    color: var(--price-especial);
+}
+
+/* ===== CONTACTO RÁPIDO ===== */
+.contacto-rapido {
+    background: linear-gradient(135deg, #E71D36, #B81428);
+    color: var(--color-white);
+}
+
+.contacto-rapido-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.contacto-item {
+    background: rgba(255,255,255,0.15);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.contacto-item:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.contacto-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.contact-link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
+    margin: 10px 0;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== NUEVA SECCIÓN DE BÚSQUEDA ===== */
+.search-section {
+    padding: 60px 0;
+    background-color: var(--color-light);
+    text-align: center;
+}
+
+.search-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: var(--color-primary);
+}
+
+.search-box {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 18px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.15rem;
+    background: rgba(255,255,255,0.95);
+    color: var(--color-dark);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search-box input:focus {
+    outline: none;
+    box-shadow: 0 12px 30px rgba(231, 29, 54, 0.3);
+    transform: translateY(-2px);
+}
+
+.search-box input::placeholder {
+    color: #666;
+    font-weight: 400;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary), #B81428);
+    color: white;
+    border: none;
+    padding: 16px 55px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(231, 29, 54, 0.4);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.7s;
+    z-index: -1;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(231, 29, 54, 0.5);
+    background: linear-gradient(135deg, #C62828, #9E0000);
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+    box-shadow: 0 8px 20px rgba(231, 29, 54, 0.4);
+}
+
+/* ===== RESULTADOS DE BÚSQUEDA ===== */
+.search-results {
+    margin-top: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-results p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    margin: 20px 0;
+}
+
+.search-result {
+    background: var(--color-white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--color-primary);
+    transition: var(--transition);
+}
+
+.search-result:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.search-result h4 {
+    color: var(--color-primary);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.search-result p {
+    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* ===== BOTONES DE REDES SOCIALES ===== */
+.social-btn.facebook {
+    background: #1877F2;
+    color: white;
+}
+
+.social-btn.tiktok {
+    background: #000000;
+    color: white;
+}
+
+.social-btn.facebook:hover {
+    background: #166FE5;
+    transform: translateY(-2px);
+}
+
+.social-btn.tiktok:hover {
+    background: #333333;
+    transform: translateY(-2px);
+}
+
+/* ===== BOTÓN DE FAVORITOS ===== */
+.btn-favorite {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: var(--transition);
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-favorite:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-favorite.favorited {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+/* ===== MEJORAS DE LEGIBILIDAD SOBRE FONDO ROJO ===== */
+.testimonios-section,
+.vegano-section,
+.contacto-rapido {
+    color: var(--color-white) !important;
+}
+
+.testimonios-section h2{
+    color: #ffffff !important;
+}
+.vegano-section h2{
+    color: #1f3d2b !important;
+}
+.contacto-rapido h2,
+.testimonios-section .section-desc{
+    color: #ffffff !important;
+}
+.vegano-section .section-desc{
+    color: #6b6b6b !important;
+}
+.contacto-rapido .section-desc {
+    color: var(--color-white) !important;
+}
+
+.testimonio-content p {
+    color: var(--color-white) !important;
+}
+
+/* ===== MEJORAS ADICIONALES ===== */
+.recipe-card {
+    position: relative;
+}
+
+.recipe-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--color-primary);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.recipe-card:hover::before {
+    opacity: 1;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--color-dark);
+    color: var(--color-white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.footer-logo p {
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+.footer-contact {
+    margin-top: 20px;
+}
+
+.footer-whatsapp,
+.footer-email {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.footer-whatsapp {
+    background: #E71D36;
+    color: white;
+}
+
+.footer-whatsapp:hover {
+    background: #C62828;
+}
+
+.footer-email {
+    background: #EA4335;
+    color: white;
+}
+
+.footer-email:hover {
+    background: #D32F2F;
+}
+
+.footer-links h4,
+.footer-info h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--color-secondary);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--color-secondary);
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.footer-social {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.social-btn.whatsapp {
+    background: #E71D36;
+    color: white;
+}
+
+.social-btn.email {
+    background: #EA4335;
+    color: white;
+}
+
+.social-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ===== BOTÓN VOLVER ARRIBA ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    background: #C62828;
+}
+
+/* ===== RECIPES PAGES STYLES ===== */
+.recipe-info {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 30px 0;
+}
+
+.recipe-info h2 {
+    color: var(--color-primary);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.ingredients-list,
+.preparation-steps {
+    margin-left: 20px;
+}
+
+.ingredients-list li,
+.preparation-steps li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.ingredients-list li::before {
+    content: "✓ ";
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.preparation-steps li::before {
+    content: counter(step) ". ";
+    counter-increment: step;
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.preparation-steps {
+    counter-reset: step;
+}
+
+.nutrition-info {
+    background: #FFEBEE;
+    border-left: 4px solid var(--color-primary);
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+.nutrition-info h3 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.nutrition-item {
+    text-align: center;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+}
+
+.nutrition-item strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+.tips-box {
+    background: #FFF3E0;
+    border-left: 4px solid var(--color-accent);
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+.tips-box h3 {
+    color: var(--color-accent);
+    margin-bottom: 10px;
+}
+
+.tips-box ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.tips-box li {
+    margin-bottom: 8px;
+}
+
+.print-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 20px 0;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.print-btn:hover {
+    background: #C62828;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.recipe-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+@media print {
+    .header, .footer, .navbar, .print-btn {
+        display: none !important;
+    }
+    body {
+        background: white !important;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar a {
+        text-align: center;
+    }
+    
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-box input {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    
+    .btn-primary {
+        padding: 14px 45px;
+        font-size: 1.15rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .recipes-grid,
+    .testimonios-grid,
+    .cancer-types,
+    .vegano-grid,
+    .prevencion-grid,
+    .contacto-rapido-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar-fixed ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-results {
+        margin-top: 20px;
+    }
+    
+    .search-result {
+        padding: 15px;
+    }
+}

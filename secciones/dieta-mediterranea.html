@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥗 Dieta Mediterránea | OncoRecetas</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .mediterranea-hero {
+            background: linear-gradient(rgba(231, 29, 54, 0.9), rgba(184, 20, 40, 0.9)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') center/cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .mediterranea-hero h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .mediterranea-list {
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .mediterranea-list li {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .mediterranea-list li::before {
+            content: "✓";
+            color: var(--color-primary);
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .print-btn {
+            background: linear-gradient(135deg, var(--color-primary), #B81428);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin: 20px 0;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(231, 29, 54, 0.4);
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(231, 29, 54, 0.5);
+            background: linear-gradient(135deg, #C62828, #9E0000);
+        }
+        
+        @media print {
+            .header, .footer, .navbar, .print-btn, .mediterranea-hero {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            
+            .recipe-info, .tips-box {
+                padding: 20px !important;
+                margin: 0 !important;
+            }
+            
+            h1, h2, h3 {
+                color: #333 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <h1>OncoRecetas</h1>
+                <p class="tagline">Nutrición con corazón</p>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                    <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                    <li><a href="../index.html#prevencion">Prevención</a></li>
+                    <li><a href="../index.html#recetas">Todas las recetas</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="mediterranea-hero">
+        <h1>🥗 Dieta Mediterránea</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 15px auto;">
+            El patrón alimenticio más estudiado para prevenir el cáncer y promover la salud
+        </p>
+    </section>
+
+    <section class="section" style="background-color: white; text-align: center;">
+        <div class="container">
+            <button class="print-btn" onclick="window.print()">
+                🖨️ Imprimir Guía
+            </button>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="tips-box">
+                <h3>💡 ¿Qué es la Dieta Mediterránea?</h3>
+                <p style="line-height: 1.8;">
+                    La Dieta Mediterránea es un patrón alimenticio basado en los hábitos tradicionales de los países que rodean el Mar Mediterráneo. 
+                    Ha sido reconocida por la UNESCO como Patrimonio Cultural Inmaterial de la Humanidad y es considerada 
+                    <strong>la dieta más saludable del mundo</strong> por su capacidad para prevenir enfermedades crónicas, 
+                    incluyendo varios tipos de cáncer.
+                </p>
+            </div>
+            
+            <div class="tips-box">
+                <h3>📋 Pilares de la Dieta Mediterránea</h3>
+                <ul class="mediterranea-list">
+                    <li><strong>Abundancia de vegetales:</strong> Frutas, verduras, legumbres y hortalizas en cada comida.</li>
+                    <li><strong>Aceite de oliva extra virgen:</strong> Grasa principal, rico en antioxidantes y ácidos grasos monoinsaturados.</li>
+                    <li><strong>Cereales integrales:</strong> Pan integral, pasta integral, arroz integral y otros granos completos.</li>
+                    <li><strong>Pescado y mariscos:</strong> Consumo regular (2-3 veces por semana), especialmente pescados grasos como salmón y sardinas.</li>
+                    <li><strong>Frutos secos y semillas:</strong> Una porción diaria (30g) de almendras, nueces, avellanas o semillas.</li>
+                    <li><strong>Vino tinto con moderación:</strong> Opcional, máximo 1 copa al día para mujeres y 2 para hombres, preferentemente con las comidas.</li>
+                    <li><strong>Actividad física diaria:</strong> Parte integral del estilo de vida mediterráneo.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-family: 'Poppins', sans-serif; color: #27AE60; margin-bottom: 40px;">
+                🌿 Beneficios para Pacientes con Cáncer
+            </h2>
+            
+            <div class="tips-box">
+                <ul class="mediterranea-list">
+                    <li><strong>Reduce la inflamación:</strong> Los antioxidantes del aceite de oliva y las verduras combaten la inflamación crónica asociada al cáncer.</li>
+                    <li><strong>Protege el ADN:</strong> Los polifenoles del aceite de oliva y el vino tinto ayudan a proteger el material genético de daños.</li>
+                    <li><strong>Mejora la respuesta al tratamiento:</strong> Estudios muestran mejor tolerancia a la quimioterapia en pacientes que siguen este patrón alimenticio.</li>
+                    <li><strong>Reduce el riesgo de recurrencia:</strong> Especialmente efectiva para cáncer de mama, colorrectal y próstata.</li>
+                    <li><strong>Mantiene peso saludable:</strong> Ayuda a evitar la obesidad, factor de riesgo para 13 tipos de cáncer.</li>
+                    <li><strong>Fortalece el sistema inmunológico:</strong> Nutrientes esenciales para mantener las defensas durante el tratamiento.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; font-family: 'Poppins', sans-serif; color: #E71D36; margin-bottom: 40px;">
+                🍽️ Recetas Mediterráneas Recomendadas
+            </h2>
+            
+            <div class="recipes-grid">
+                <div class="recipe-card" data-price="balanceado" data-cancer="general" data-vegano="no">
+                    <div class="recipe-header">
+                        <h3>🐟 Salmón al Horno con Camote</h3>
+                        <span class="price-tag balanceado">S/ 35.00 💲💲💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 45 min • 👥 2 porciones</p>
+                    <p class="recipe-desc">
+                        Rico en omega-3 y fibra. Perfecto para salud cardiovascular y prevención.
+                    </p>
+                    <a href="../recetas/salmon-camote.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <div class="recipe-card" data-price="economico" data-cancer="general" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🍲 Sopa de Lentejas Energética</h3>
+                        <span class="price-tag economico">S/ 7.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 30 min • 👥 4 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Proteínas vegetales y fibra para mantener la masa muscular durante el tratamiento.
+                    </p>
+                    <a href="../recetas/sopa-lentejas.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <div class="recipe-card" data-price="balanceado" data-cancer="prostata" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🍛 Curry de Garbanzos</h3>
+                        <span class="price-tag balanceado">S/ 18.00 💲💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 40 min • 👥 4 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Rico en licopeno y antioxidantes. Especialmente beneficioso para próstata.
+                    </p>
+                    <a href="../recetas/curry-garbanzos.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <div class="recipe-card" data-price="economico" data-cancer="general" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🥗 Ensalada Mediterránea</h3>
+                        <span class="price-tag economico">S/ 12.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 15 min • 👥 2 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Con tomate, pepino, aceitunas, queso feta y aceite de oliva extra virgen.
+                    </p>
+                    <a href="../recetas/ensalada-mediterranea.html" class="btn-detail">Ver receta →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div class="tips-box">
+                <h3>🌟 Consejos para Adoptar la Dieta Mediterránea</h3>
+                <ul class="mediterranea-list">
+                    <li><strong>Empieza con el desayuno:</strong> Avena con frutas frescas, nueces y una cucharada de aceite de oliva.</li>
+                    <li><strong>Cambia tu aceite:</strong> Usa solo aceite de oliva extra virgen para cocinar y aliñar.</li>
+                    <li><strong>Duplica las verduras:</strong> En cada comida, que la mitad del plato sean vegetales de colores variados.</li>
+                    <li><strong>Reemplaza carnes rojas:</strong> Consume pescado 2-3 veces por semana y legumbres 3-4 veces.</li>
+                    <li><strong>Snack saludable:</strong> Lleva siempre contigo un puñado de frutos secos sin sal.</li>
+                    <li><strong>Cocina en familia:</strong> El estilo mediterráneo valora las comidas compartidas y sin prisas.</li>
+                    <li><strong>Hidratación:</strong> Bebe agua abundantemente; el vino es opcional y con moderación.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="tips-box">
+                <h3>🔬 Evidencia Científica</h3>
+                <p style="line-height: 1.8;">
+                    Un estudio publicado en el <em>Journal of the American Medical Association</em> (2018) siguió a más de 40,000 mujeres durante 20 años y encontró que aquellas que seguían una dieta mediterránea tenían un <strong>24% menos de riesgo de desarrollar cáncer de mama</strong>. Otro estudio del <em>British Medical Journal</em> (2020) mostró una reducción del <strong>18% en el riesgo de cáncer colorrectal</strong> en personas que adherían estrictamente a este patrón alimenticio.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">❤️</span>
+                    <h3>OncoRecetas</h3>
+                    <p>Nutrición con corazón</p>
+                    <div class="footer-contact">
+                        <a href="https://wa.me/51952724874" target="_blank" class="footer-whatsapp">
+                            💬 WhatsApp: 952 724 874
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="footer-email">
+                            📧 oncorecetas.lcc@gmail.com
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                        <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                        <li><a href="../index.html#prevencion">Prevención</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Información</h4>
+                    <p>📍 Perú</p>
+                    <p>📧 oncorecetas.lcc@gmail.com</p>
+                    <p>💬 WhatsApp: 952 724 874</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1CH7q8jcSw/" target="_blank" class="social-btn facebook">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@oncorecetas.lcc" target="_blank" class="social-btn tiktok">
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://wa.me/51952724874" target="_blank" class="social-btn whatsapp">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="social-btn email">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 OncoRecetas. Todos los derechos reservados.</p>
+                <p style="margin-top: 8px; font-size: 0.9rem; opacity: 0.7;">
+                    💙 Proyecto creado con amor para acompañarte en tu camino hacia la salud
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>

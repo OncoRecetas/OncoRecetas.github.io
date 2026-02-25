@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️ OncoRecetas • Nutrición con corazón</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER CON LOGO DE ALIADO -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo de Liga contra el cáncer (esquina superior derecha) -->
+            <div class="aliado-logo">
+                <a href="https://ligacancer.org.pe/" target="_blank" title="Visita la Liga contra el Cáncer">
+                    <img src="recetas/imagenes/logo_lcc.png" alt="Liga contra el Cáncer" >
+                
+                </a>
+            </div>
+            
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <h1>OncoRecetas</h1>
+                <p class="tagline">Nutrición con corazón</p>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#cancer">Por tipo de cáncer</a></li>
+                    <li><a href="#vegano">Opciones veganas</a></li>
+                    <li><a href="#prevencion">Prevención</a></li>
+                    <li><a href="#recetas">Todas las recetas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE BÚSQUEDA -->
+    <section class="search-section">
+        <div class="container">
+            <h3>🔍 Encuentra recetas específicas</h3>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Ej: Sopa, batido, plato principal...">
+                <button class="btn-primary" id="searchButton">Buscar recetas</button>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </section>
+
+    <!-- POR TIPO DE CÁNCER -->
+    <section class="section" id="cancer">
+        <div class="container">
+            <h2>🏥 Recetas por tipo de cáncer</h2>
+            <p class="section-desc">Encuentra recetas adaptadas a cada necesidad específica</p>
+            
+            <div class="cancer-types">
+                <a href="cancer/prostata.html" class="cancer-card">
+                    <h3>Próstata</h3>
+                    <p>Rico en licopeno, soya y omega-3</p>
+                </a>
+                <a href="cancer/colorrectal.html" class="cancer-card">
+                    <h3>Colorrectal</h3>
+                    <p>Alto en fibra, bajo en grasas rojas</p>
+                </a>
+                <a href="cancer/pulmon.html" class="cancer-card">
+                    <h3>Pulmón</h3>
+                    <p>Alto en calorías, fácil preparación</p>
+                </a>
+                <a href="cancer/estomago.html" class="cancer-card">
+                    <h3>Estómago</h3>
+                    <p>Texturas suaves, fácil digestión</p>
+                </a>
+                <a href="cancer/leucemia.html" class="cancer-card">
+                    <h3>Leucemia</h3>
+                    <p>Alto en proteínas, bajo riesgo infecciones</p>
+                </a>
+                <a href="#recetas" class="cancer-card">
+                    <h3>Otros tipos</h3>
+                    <p>Explorar todas las opciones</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPCIONES VEGANAS -->
+    <section class="section vegano-section" id="vegano">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🌱</span>
+                <h2>Opciones Veganas</h2>
+            </div>
+            <p class="section-desc">Recetas basadas en plantas, nutritivas y fáciles de digerir</p>
+            
+            <div class="vegano-grid">
+                <a href="secciones/vegano.html" class="vegano-item">
+                    <h3>Proteínas Vegetales</h3>
+                    <p>Lentejas, garbanzos, tofu, quinoa</p>
+                </a>
+                <a href="secciones/vegano.html" class="vegano-item">
+                    <h3>Batidos Energéticos</h3>
+                    <p>Smoothies nutritivos en minutos</p>
+                </a>
+                <a href="secciones/vegano.html" class="vegano-item">
+                    <h3>Snacks Saludables</h3>
+                    <p>Frutos secos, hummus, aguacate</p>
+                </a>
+                <a href="secciones/vegano.html" class="vegano-item">
+                    <h3>Menús Completos</h3>
+                    <p>Platos veganos por tipo de cáncer</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREVENCIÓN -->
+    <section class="section" id="prevencion">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">🛡️</span>
+                <h2>Prevención</h2>
+            </div>
+            <p class="section-desc">Cuida tu salud con alimentación inteligente</p>
+            
+            <div class="prevencion-grid">
+                <a href="secciones/prevencion.html" class="prevencion-card">
+                    <h3>🥗 Alimentación Preventiva</h3>
+                    <p>Alimentos anti-cáncer y dieta mediterránea para cuidar tu salud</p>
+                </a>
+                
+                <a href="secciones/economico.html" class="prevencion-card">
+                    <h3>💰 Menú Semanal S/ 100</h3>
+                    <p>Plan económico y nutritivo para toda la semana</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANCO DE RECETAS -->
+    <section class="section" id="recetas">
+        <div class="container">
+            <h2>🍳 Banco de Recetas</h2>
+            <p class="section-desc">Encuentra la receta perfecta para ti</p>
+            
+            <div class="filters">
+                <div class="filter-group" data-filter-type="budget">
+                    <label>💰 Presupuesto:</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="economico">💲 Económico</button>
+                        <button class="filter-btn" data-filter="balanceado">💲💲 Balanceado</button>
+                        <button class="filter-btn" data-filter="especial">💲💲💲 Especial</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group" data-filter-type="vegan">
+                    <label>🌱 Vegano:</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="vegano-si">Solo veganos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipes-grid">
+                <div class="recipe-card" data-price="economico" data-cancer="prostata" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🍲 Sopa de Lentejas Energética</h3>
+                        <span class="price-tag economico">S/ 7.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 30 min • 👥 4 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">Perfecta para días sin mucho apetito. Rica en proteínas y hierro.</p>
+                    <a href="recetas/sopa-lentejas.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <div class="recipe-card" data-price="economico" data-cancer="general" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🥤 Batido Anti-Náuseas</h3>
+                        <span class="price-tag economico">S/ 5.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 5 min • 👥 1 porción • 🌱 Vegana</p>
+                    <p class="recipe-desc">Con jengibre y plátano. Ideal para momentos difíciles.</p>
+                    <a href="recetas/batido-anti-nauseas.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <div class="recipe-card" data-price="balanceado" data-cancer="prostata" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🍛 Curry de Garbanzos</h3>
+                        <span class="price-tag balanceado">S/ 18.00 💲💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 40 min • 👥 4 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">Rico en licopeno y antioxidantes. Perfecto para próstata.</p>
+                    <a href="recetas/curry-garbanzos.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <div class="recipe-card" data-price="economico" data-cancer="general" data-vegano="no">
+                    <div class="recipe-header">
+                        <h3>🥣 Avena con Plátano</h3>
+                        <span class="price-tag economico">S/ 4.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 10 min • 👥 1 porción</p>
+                    <p class="recipe-desc">Desayuno energético y fácil de digerir.</p>
+                    <a href="recetas/avena-platano.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <div class="recipe-card" data-price="balanceado" data-cancer="pulmon" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🍵 Sopa de Miso con Vegetales</h3>
+                        <span class="price-tag balanceado">S/ 22.00 💲💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 25 min • 👥 3 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">Caliente, reconfortante y rica en probióticos.</p>
+                    <a href="recetas/sopa-miso.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <div class="recipe-card" data-price="especial" data-cancer="colorrectal" data-vegano="no">
+                    <div class="recipe-header">
+                        <h3>🐟 Salmón al Horno con Camote</h3>
+                        <span class="price-tag especial">S/ 35.00 💲💲💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 45 min • 👥 2 porciones</p>
+                    <p class="recipe-desc">Omega-3 y fibra. Excelente para colon saludable.</p>
+                    <a href="recetas/salmon-camote.html" class="btn-detail">Ver receta →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section testimonios-section" id="testimonios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-icon">❤️</span>
+                <h2>Testimonios de Esperanza</h2>
+            </div>
+            <p class="section-desc">Historias reales de personas que han encontrado fuerza en la buena alimentación</p>
+            
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <div class="testimonio-content">
+                        <p>"Gracias a las recetas de OncoRecetas, pude mantener mi fuerza durante la quimioterapia. El batido anti-náuseas fue mi salvación en los días más difíciles."</p>
+                    </div>
+                    <div class="testimonio-author">
+                        <strong>- Carlos M., 48 años</strong>
+                        <p>Sobreviviente de cáncer de próstata</p>
+                    </div>
+                </div>
+
+                <div class="testimonio-card">
+                    <div class="testimonio-content">
+                        <p>"Como cuidadora de mi esposo, estas recetas me dieron tranquilidad. Saber que estaba alimentándolo con lo mejor para su recuperación hizo toda la diferencia."</p>
+                    </div>
+                    <div class="testimonio-author">
+                        <strong>- María L., 45 años</strong>
+                        <p>Cuidadora de paciente con cáncer de pulmón</p>
+                    </div>
+                </div>
+
+                <div class="testimonio-card">
+                    <div class="testimonio-content">
+                        <p>"Las opciones veganas me ayudaron muchísimo. Durante el tratamiento perdí el apetito por las carnes, pero con estas recetas nunca dejé de nutrirme adecuadamente."</p>
+                    </div>
+                    <div class="testimonio-author">
+                        <strong>- Javier R., 52 años</strong>
+                        <p>Paciente con cáncer colorrectal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO RÁPIDO -->
+    <section class="section contacto-rapido" id="contacto">
+        <div class="container">
+            <h2>📞 Contáctanos</h2>
+            <p class="section-desc">Estamos aquí para ayudarte en tu camino</p>
+            
+            <div class="contacto-rapido-grid">
+                <div class="contacto-item">
+                    <span class="contact-icon">💬</span>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/51952724874" target="_blank" class="contact-link">952 724 874</a></p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Escríbenos directamente</p>
+                </div>
+                <div class="contacto-item">
+                    <span class="contact-icon">📧</span>
+                    <h3>Correo Electrónico</h3>
+                    <p><a href="mailto:oncorecetas.lcc@gmail.com" class="contact-link">oncorecetas.lcc@gmail.com</a></p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Contáctanos por email</p>
+                </div>
+                <div class="contacto-item">
+                    <span class="contact-icon">📝</span>
+                    <h3>Formulario</h3>
+                    <p><a href="contacto.html" class="contact-link">Ir al formulario</a></p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Envía tu mensaje</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">❤️</span>
+                    <h3>OncoRecetas</h3>
+                    <p>Nutrición con corazón</p>
+                    <div class="footer-contact">
+                        <a href="https://wa.me/51952724874" target="_blank" class="footer-whatsapp">
+                            💬 WhatsApp: 952 724 874
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="footer-email">
+                            📧 oncorecetas.lcc@gmail.com
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#cancer">Por tipo de cáncer</a></li>
+                        <li><a href="#vegano">Opciones veganas</a></li>
+                        <li><a href="#prevencion">Prevención</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Información</h4>
+                    <p>📍 Perú</p>
+                    <p>📧 oncorecetas.lcc@gmail.com</p>
+                    <p>💬 WhatsApp: 952 724 874</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1CH7q8jcSw/" target="_blank" class="social-btn facebook">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@oncorecetas.lcc" target="_blank" class="social-btn tiktok">
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://wa.me/51952724874" target="_blank" class="social-btn whatsapp">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="social-btn email">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 OncoRecetas. Todos los derechos reservados.</p>
+                <p style="margin-top: 8px; font-size: 0.9rem; opacity: 0.7;">
+                    💙 Proyecto creado con amor para acompañarte en tu camino hacia la salud
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

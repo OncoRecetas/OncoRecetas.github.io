@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍅 Alimentos Anti-Cáncer | OncoRecetas</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .anticancer-hero {
+            background: linear-gradient(rgba(231, 29, 54, 0.9), rgba(184, 20, 40, 0.9)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') center/cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .anticancer-hero h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .anticancer-list {
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .anticancer-list li {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .anticancer-list li::before {
+            content: "✓";
+            color: var(--color-primary);
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .print-btn {
+            background: linear-gradient(135deg, var(--color-primary), #B81428);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin: 20px 0;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(231, 29, 54, 0.4);
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(231, 29, 54, 0.5);
+            background: linear-gradient(135deg, #C62828, #9E0000);
+        }
+        
+        @media print {
+            .header, .footer, .navbar, .print-btn, .anticancer-hero {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            
+            .recipe-info, .tips-box {
+                padding: 20px !important;
+                margin: 0 !important;
+            }
+            
+            h1, h2, h3 {
+                color: #333 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <h1>OncoRecetas</h1>
+                <p class="tagline">Nutrición con corazón</p>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                    <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                    <li><a href="../index.html#prevencion">Prevención</a></li>
+                    <li><a href="../index.html#recetas">Todas las recetas</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="anticancer-hero">
+        <h1>🍅 Alimentos Anti-Cáncer</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 15px auto;">
+            Alimentos comprobados científicamente para reducir el riesgo de cáncer
+        </p>
+    </section>
+
+    <section class="section" style="background-color: white; text-align: center;">
+        <div class="container">
+            <button class="print-btn" onclick="window.print()">
+                🖨️ Imprimir Guía
+            </button>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="tips-box">
+                <h3>💡 ¿Por qué estos alimentos?</h3>
+                <p style="line-height: 1.8;">
+                    Los alimentos anti-cáncer contienen compuestos bioactivos que ayudan a combatir el daño celular, reducir la inflamación y proteger el ADN. 
+                    Estudios científicos muestran que una dieta rica en estos alimentos puede reducir hasta en un <strong>30% el riesgo de desarrollar cáncer</strong>.
+                </p>
+            </div>
+            
+            <div class="tips-box">
+                <h3>🍅 Tomate</h3>
+                <p style="line-height: 1.8;">
+                    <strong>Compuesto clave:</strong> Licopeno<br>
+                    <strong>Beneficios:</strong> Reduce el riesgo de cáncer de próstata, mama y pulmón.<br>
+                    <strong>Cómo consumir:</strong> Cocido (en salsas, sopas) para aumentar la absorción del licopeno.<br>
+                    <strong>Recomendación:</strong> 2-3 porciones semanales (1 porción = 1 tomate mediano).
+                </p>
+            </div>
+            
+            <div class="tips-box">
+                <h3>🥦 Brócoli</h3>
+                <p style="line-height: 1.8;">
+                    <strong>Compuesto clave:</strong> Sulforafano<br>
+                    <strong>Beneficios:</strong> Ayuda a activar los mecanismos de defensa contra el cáncer y elimina toxinas.<br>
+                    <strong>Cómo consumir:</strong> Al vapor, crudo en ensaladas o ligeramente cocido.<br>
+                    <strong>Recomendación:</strong> 2-3 porciones semanales (1 porción = 1 taza de brócoli cocido).
+                </p>
+            </div>
+            
+            <div class="tips-box">
+                <h3>🧄 Ajo</h3>
+                <p style="line-height: 1.8;">
+                    <strong>Compuesto clave:</strong> Allicina<br>
+                    <strong>Beneficios:</strong> Propiedades antimicrobianas y antioxidantes que protegen contra el cáncer gastrointestinal.<br>
+                    <strong>Cómo consumir:</strong> Picado y reposado 10 minutos antes de cocinar para activar la allicina.<br>
+                    <strong>Recomendación:</strong> 2-3 dientes diarios (en crudo o cocido).
+                </p>
+            </div>
+            
+            <div class="tips-box">
+                <h3>🍵 Té Verde</h3>
+                <p style="line-height: 1.8;">
+                    <strong>Compuesto clave:</strong> Catequinas<br>
+                    <strong>Beneficios:</strong> Reduce el riesgo de cáncer de próstata, mama y colon.<br>
+                    <strong>Cómo consumir:</strong> 2-3 tazas diarias de té verde recién hecho (evita hervir el agua).<br>
+                    <strong>Recomendación:</strong> 2-3 tazas diarias para máximos beneficios.
+                </p>
+            </div>
+            
+            <div class="tips-box">
+                <h3>🫐 Frutos Rojos</h3>
+                <p style="line-height: 1.8;">
+                    <strong>Compuesto clave:</strong> Antocianinas<br>
+                    <strong>Beneficios:</strong> Combaten el daño celular y reducen la inflamación crónica.<br>
+                    <strong>Cómo consumir:</strong> Frescos, con yogur griego, en batidos o como snack.<br>
+                    <strong>Recomendación:</strong> 1 taza diaria de frutos rojos (fresas, arándanos, moras).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-family: 'Poppins', sans-serif; color: #27AE60; margin-bottom: 40px;">
+                🌿 Beneficios para Pacientes con Cáncer
+            </h2>
+            
+            <div class="tips-box">
+                <ul class="anticancer-list">
+                    <li><strong>Protección del ADN:</strong> Los antioxidantes ayudan a proteger el material genético de daños causados por el tratamiento.</li>
+                    <li><strong>Reducción de inflamación:</strong> Los compuestos antiinflamatorios ayudan a reducir la fatiga y los efectos secundarios.</li>
+                    <li><strong>Apoyo a la inmunidad:</strong> Nutrientes esenciales para mantener las defensas durante la quimioterapia.</li>
+                    <li><strong>Mejora en la calidad de vida:</strong> Mayor energía y mejor apetito durante el tratamiento.</li>
+                    <li><strong>Reducción de riesgo de recurrencia:</strong> Estudios muestran que estos alimentos reducen el riesgo de reaparición del cáncer.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; font-family: 'Poppins', sans-serif; color: #E71D36; margin-bottom: 40px;">
+                🍽️ Recetas con Alimentos Anti-Cáncer
+            </h2>
+            
+            <div class="recipes-grid">
+                <div class="recipe-card" data-price="economico" data-cancer="general" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🥗 Ensalada de Brócoli y Frutos Rojos</h3>
+                        <span class="price-tag economico">S/ 12.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 15 min • 👥 2 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Con brócoli al vapor, arándanos, nueces y aderezo de limón.
+                    </p>
+                    <a href="../recetas/ensalada-brocoli.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <div class="recipe-card" data-price="balanceado" data-cancer="prostata" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🍛 Curry de Garbanzos</h3>
+                        <span class="price-tag balanceado">S/ 18.00 💲💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 40 min • 👥 4 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Rico en licopeno y antioxidantes. Especialmente beneficioso para próstata.
+                    </p>
+                    <a href="../recetas/curry-garbanzos.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <div class="recipe-card" data-price="economico" data-cancer="general" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🥬 Sopa de Ajo y Brócoli</h3>
+                        <span class="price-tag economico">S/ 8.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 25 min • 👥 3 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Con brócoli, ajo fresco y caldo vegetal.
+                    </p>
+                    <a href="../recetas/sopa-ajo.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <div class="recipe-card" data-price="economico" data-cancer="general" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🥣 Batido de Frutos Rojos</h3>
+                        <span class="price-tag economico">S/ 7.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 10 min • 👥 1 porción • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Con fresas, arándanos, plátano y leche de almendras.
+                    </p>
+                    <a href="../recetas/batido-frutos-rojos.html" class="btn-detail">Ver receta →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div class="tips-box">
+                <h3>🌟 Consejos para Incluir Alimentos Anti-Cáncer</h3>
+                <ul class="anticancer-list">
+                    <li><strong>Introduce gradualmente:</strong> Añade un alimento nuevo cada semana para acostumbrarte a los sabores.</li>
+                    <li><strong>Combina sabores:</strong> Mezcla alimentos anti-cáncer en platos familiares (ej: brócoli con arroz integral).</li>
+                    <li><strong>Prepara porciones:</strong> Cocina en grandes cantidades y congela para tener siempre disponibles.</li>
+                    <li><strong>Usa especias:</strong> El jengibre, cúrcuma y pimentón potencian los beneficios antiinflamatorios.</li>
+                    <li><strong>Evita sobrecocinar:</strong> Cocina al vapor o a la plancha para preservar los nutrientes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="tips-box">
+                <h3>🔬 Evidencia Científica</h3>
+                <p style="line-height: 1.8;">
+                    Un estudio publicado en el <em>Journal of the National Cancer Institute</em> (2019) siguió a 150,000 personas durante 15 años y encontró que aquellas que consumían 3 porciones semanales de tomate tenían un <strong>26% menos de riesgo de cáncer de próstata</strong>. Otro estudio del <em>British Journal of Nutrition</em> (2020) mostró que el consumo regular de brócoli reducía en un <strong>28% el riesgo de cáncer colorrectal</strong> en mujeres posmenopáusicas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">❤️</span>
+                    <h3>OncoRecetas</h3>
+                    <p>Nutrición con corazón</p>
+                    <div class="footer-contact">
+                        <a href="https://wa.me/51952724874" target="_blank" class="footer-whatsapp">
+                            💬 WhatsApp: 952 724 874
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="footer-email">
+                            📧 oncorecetas.lcc@gmail.com
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                        <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                        <li><a href="../index.html#prevencion">Prevención</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Información</h4>
+                    <p>📍 Perú</p>
+                    <p>📧 oncorecetas.lcc@gmail.com</p>
+                    <p>💬 WhatsApp: 952 724 874</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1CH7q8jcSw/" target="_blank" class="social-btn facebook">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@oncorecetas.lcc" target="_blank" class="social-btn tiktok">
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://wa.me/51952724874" target="_blank" class="social-btn whatsapp">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="social-btn email">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 OncoRecetas. Todos los derechos reservados.</p>
+                <p style="margin-top: 8px; font-size: 0.9rem; opacity: 0.7;">
+                    💙 Proyecto creado con amor para acompañarte en tu camino hacia la salud
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>

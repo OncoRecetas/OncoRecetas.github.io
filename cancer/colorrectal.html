@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas para Cáncer Colorrectal | OncoRecetas</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CORRECCIÓN CRÍTICA: Centrar el título */
+        .cancer-hero {
+            background: linear-gradient(rgba(231, 29, 54, 0.9), rgba(184, 20, 40, 0.9)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') center/cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center; /* ¡ESTO FALTABA! */
+        }
+        
+        /* Asegurar que el h1 esté centrado */
+        .cancer-hero h1 {
+            text-align: center; /* ¡ESTO FALTABA! */
+        }
+        
+        /* Corrección de espacios en URLs */
+        .cancer-hero {
+            background: linear-gradient(rgba(231, 29, 54, 0.9), rgba(184, 20, 40, 0.9)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') center/cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER CORREGIDO -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <h1>OncoRecetas</h1>
+                <p class="tagline">Nutrición con corazón</p>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                    <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                    <li><a href="../index.html#prevencion">Prevención</a></li>
+                    <li><a href="../index.html#recetas">Todas las recetas</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO CORREGIDO (¡CENTRADO!) -->
+    <section class="cancer-hero">
+        <h1>Recetas para Cáncer Colorrectal</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 15px auto;">
+            Alimentos altos en fibra y bajos en grasas rojas para apoyar tu salud intestinal
+        </p>
+    </section>
+
+    <!-- INFORMACIÓN -->
+    <section class="section">
+        <div class="container">
+            <div class="tips-box">
+                <h3>💡 ¿Por qué estas recetas?</h3>
+                <p style="line-height: 1.8;">
+                    El cáncer colorrectal se beneficia de una dieta rica en:
+                    <strong>fibra</strong> (frutas, verduras, legumbres), 
+                    <strong>calcio</strong> y <strong>vitamina D</strong>, 
+                    mientras se limitan las <strong>grasas rojas</strong> y 
+                    <strong>carnes procesadas</strong>. La fibra ayuda a mantener 
+                    la regularidad intestinal y reduce el riesgo de complicaciones.
+                </p>
+            </div>
+            
+            <div class="tips-box">
+                <h3>📋 Recomendaciones Nutricionales</h3>
+                <ul style="margin-left: 20px; line-height: 1.8; color: #555;">
+                    <li><strong>Fibra soluble:</strong> Avena, lentejas, manzanas y plátanos ayudan a regular el tránsito intestinal.</li>
+                    <li><strong>Fibra insoluble:</strong> Verduras de hoja verde, brócoli y zanahorias previenen el estreñimiento.</li>
+                    <li><strong>Calcio:</strong> Productos lácteos bajos en grasa, sardinas y verduras de hoja verde fortalecen los huesos.</li>
+                    <li><strong>Vitamina D:</strong> Pescados grasos, hongos y exposición al sol.</li>
+                    <li><strong>Probióticos:</strong> Yogur, kéfir y miso mantienen una flora intestinal saludable.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECETAS -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-family: 'Poppins', sans-serif; color: #E71D36; margin-bottom: 40px;">
+                🍽️ Recetas Recomendadas
+            </h2>
+            
+            <div class="recipes-grid">
+                <!-- Receta 1 -->
+                <div class="recipe-card" data-price="especial" data-cancer="colorrectal" data-vegano="no">
+                    <div class="recipe-header">
+                        <h3>🐟 Salmón al Horno con Camote</h3>
+                        <span class="price-tag especial">S/ 35.00 💲💲💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 45 min • 👥 2 porciones</p>
+                    <p class="recipe-desc">
+                        Omega-3 y fibra. Excelente para colon saludable.
+                    </p>
+                    <a href="../recetas/salmon-camote.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <!-- Receta 2 -->
+                <div class="recipe-card" data-price="economico" data-cancer="colorrectal" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🍲 Sopa de Lentejas Energética</h3>
+                        <span class="price-tag economico">S/ 7.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 30 min • 👥 4 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Perfecta para días sin mucho apetito. Rica en proteínas y hierro.
+                    </p>
+                    <a href="../recetas/sopa-lentejas.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <!-- Receta 3 -->
+                <div class="recipe-card" data-price="economico" data-cancer="colorrectal" data-vegano="no">
+                    <div class="recipe-header">
+                        <h3>🥣 Avena con Plátano</h3>
+                        <span class="price-tag economico">S/ 4.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 10 min • 👥 1 porción</p>
+                    <p class="recipe-desc">
+                        Desayuno energético y fácil de digerir.
+                    </p>
+                    <a href="../recetas/avena-platano.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <!-- Receta 4 -->
+                <div class="recipe-card" data-price="balanceado" data-cancer="colorrectal" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🍵 Sopa de Miso con Vegetales</h3>
+                        <span class="price-tag balanceado">S/ 22.00 💲💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 25 min • 👥 3 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Caliente, reconfortante y rica en probióticos.
+                    </p>
+                    <a href="../recetas/sopa-miso.html" class="btn-detail">Ver receta →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSEJOS -->
+    <section class="section">
+        <div class="container">
+            <div class="tips-box">
+                <h3>🌟 Consejos Adicionales</h3>
+                <ul style="margin-left: 20px; line-height: 1.8; color: #555;">
+                    <li><strong>Evita carnes rojas:</strong> Limita el consumo de carne roja a menos de 500g por semana.</li>
+                    <li><strong>Elimina carnes procesadas:</strong> Evita jamón, salchichas, tocino y embutidos.</li>
+                    <li><strong>Aumenta la fibra gradualmente:</strong> Para evitar gases y molestias intestinales.</li>
+                    <li><strong>Mantente hidratado:</strong> Bebe suficiente agua para que la fibra funcione correctamente.</li>
+                    <li><strong>Consulta con tu médico:</strong> Antes de hacer cambios significativos en tu dieta.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CORREGIDO -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">❤️</span>
+                    <h3>OncoRecetas</h3>
+                    <p>Nutrición con corazón</p>
+                    <div class="footer-contact">
+                        <a href="https://wa.me/51952724874" target="_blank" class="footer-whatsapp">
+                            💬 WhatsApp: 952 724 874
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="footer-email">
+                            📧 oncorecetas.lcc@gmail.com
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                        <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                        <li><a href="../index.html#prevencion">Prevención</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Información</h4>
+                    <p>📍 Perú</p>
+                    <p>📧 oncorecetas.lcc@gmail.com</p>
+                    <p>💬 WhatsApp: 952 724 874</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1CH7q8jcSw/" target="_blank" class="social-btn facebook">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@oncorecetas.lcc" target="_blank" class="social-btn tiktok">
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://wa.me/51952724874" target="_blank" class="social-btn whatsapp">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="social-btn email">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 OncoRecetas. Todos los derechos reservados.</p>
+                <p style="margin-top: 8px; font-size: 0.9rem; opacity: 0.7;">
+                    💙 Proyecto creado con amor para acompañarte en tu camino hacia la salud
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>

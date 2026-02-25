@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 Menú Económico | OncoRecetas</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CORRECCIÓN CRÍTICA: Centrar el título */
+        .economico-hero {
+            background: linear-gradient(rgba(231, 29, 54, 0.9), rgba(184, 20, 40, 0.9)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') center/cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center; /* ¡ESTO CENTRA TODO! */
+        }
+        
+        .economico-hero h1 {
+            text-align: center; /* ¡ESTO CENTRA EL TÍTULO! */
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER CORREGIDO -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <h1>OncoRecetas</h1>
+                <p class="tagline">Nutrición con corazón</p>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                    <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                    <li><a href="../index.html#prevencion">Prevención</a></li>
+                    <li><a href="../index.html#recetas">Todas las recetas</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO CORREGIDO (¡CENTRADO!) -->
+    <section class="economico-hero">
+        <h1>💰 Menú Semanal Económico</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 15px auto;">
+            Plan económico y nutritivo para toda la semana con un presupuesto de S/ 100
+        </p>
+    </section>
+
+    <!-- PRESUPUESTO -->
+    <section class="section">
+        <div class="container">
+            <div class="budget-box">
+                <h2>🎯 Presupuesto: S/ 100</h2>
+                <p>Menú completo para 7 días con todas las comidas</p>
+            </div>
+            
+            <div class="tips-box">
+                <h3>💡 ¿Cómo es posible?</h3>
+                <p style="line-height: 1.8;">
+                    Este menú económico se basa en <strong>alimentos de temporada</strong>, 
+                    <strong>legumbres</strong> como fuente principal de proteínas, 
+                    <strong>verduras económicas</strong> y <strong>planificación eficiente</strong> 
+                    para aprovechar al máximo cada ingrediente y evitar desperdicios. 
+                    ¡Nutrición de calidad no tiene que ser cara!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENÚ SEMANAL -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-family: 'Poppins', sans-serif; color: #E71D36; margin-bottom: 40px;">
+                📅 Menú Semanal Económico
+            </h2>
+            
+            <div class="recipes-grid">
+                <!-- Día 1 -->
+                <div class="recipe-card" data-price="economico" data-cancer="general" data-vegano="si">
+                    <h3>🍽️ Día 1</h3>
+                    <p class="recipe-meta"><strong>Desayuno:</strong> Avena con plátano</p>
+                    <p class="recipe-meta"><strong>Almuerzo:</strong> Sopa de lentejas</p>
+                    <p class="recipe-meta"><strong>Cena:</strong> Batido de plátano</p>
+                    <p class="recipe-desc">Costo aproximado: S/ 12</p>
+                </div>
+
+                <!-- Día 2 -->
+                <div class="recipe-card" data-price="economico" data-cancer="general" data-vegano="si">
+                    <h3>🍽️ Día 2</h3>
+                    <p class="recipe-meta"><strong>Desayuno:</strong> Avena con manzana</p>
+                    <p class="recipe-meta"><strong>Almuerzo:</strong> Arroz con lentejas</p>
+                    <p class="recipe-meta"><strong>Cena:</strong> Sopa de verduras</p>
+                    <p class="recipe-desc">Costo aproximado: S/ 11</p>
+                </div>
+
+                <!-- Día 3 -->
+                <div class="recipe-card" data-price="balanceado" data-cancer="general" data-vegano="si">
+                    <h3>🍽️ Día 3</h3>
+                    <p class="recipe-meta"><strong>Desayuno:</strong> Pan integral con aguacate</p>
+                    <p class="recipe-meta"><strong>Almuerzo:</strong> Curry de garbanzos</p>
+                    <p class="recipe-meta"><strong>Cena:</strong> Batido de frutas</p>
+                    <p class="recipe-desc">Costo aproximado: S/ 14</p>
+                </div>
+
+                <!-- Día 4 -->
+                <div class="recipe-card" data-price="economico" data-cancer="general" data-vegano="si">
+                    <h3>🍽️ Día 4</h3>
+                    <p class="recipe-meta"><strong>Desayuno:</strong> Avena con plátano</p>
+                    <p class="recipe-meta"><strong>Almuerzo:</strong> Sopa de lentejas (sobras)</p>
+                    <p class="recipe-meta"><strong>Cena:</strong> Tortilla de vegetales</p>
+                    <p class="recipe-desc">Costo aproximado: S/ 10</p>
+                </div>
+
+                <!-- Día 5 -->
+                <div class="recipe-card" data-price="balanceado" data-cancer="general" data-vegano="si">
+                    <h3>🍽️ Día 5</h3>
+                    <p class="recipe-meta"><strong>Desayuno:</strong> Yogur con avena</p>
+                    <p class="recipe-meta"><strong>Almuerzo:</strong> Arroz con garbanzos</p>
+                    <p class="recipe-meta"><strong>Cena:</strong> Sopa de miso</p>
+                    <p class="recipe-desc">Costo aproximado: S/ 13</p>
+                </div>
+
+                <!-- Día 6 -->
+                <div class="recipe-card" data-price="especial" data-cancer="general" data-vegano="no">
+                    <h3>🍽️ Día 6</h3>
+                    <p class="recipe-meta"><strong>Desayuno:</strong> Pan integral con huevo</p>
+                    <p class="recipe-meta"><strong>Almuerzo:</strong> Pasta con salsa de tomate</p>
+                    <p class="recipe-meta"><strong>Cena:</strong> Batido anti-náuseas</p>
+                    <p class="recipe-desc">Costo aproximado: S/ 15</p>
+                </div>
+
+                <!-- Día 7 -->
+                <div class="recipe-card" data-price="economico" data-cancer="general" data-vegano="si">
+                    <h3>🍽️ Día 7</h3>
+                    <p class="recipe-meta"><strong>Desayuno:</strong> Avena con frutas</p>
+                    <p class="recipe-meta"><strong>Almuerzo:</strong> Sopa de verduras con arroz</p>
+                    <p class="recipe-meta"><strong>Cena:</strong> Tortilla de espinacas</p>
+                    <p class="recipe-desc">Costo aproximado: S/ 12</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LISTA DE COMPRAS -->
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; font-family: 'Poppins', sans-serif; color: #E71D36; margin-bottom: 40px;">
+                🛒 Lista de Compras (S/ 100)
+            </h2>
+            
+            <div class="tips-box">
+                <h3>📋 Ingredientes Principales</h3>
+                <ul style="margin-left: 20px; line-height: 1.8; color: #555;">
+                    <li><strong>Avena (500g):</strong> S/ 8</li>
+                    <li><strong>Lentejas (500g):</strong> S/ 6</li>
+                    <li><strong>Garbanzos (500g):</strong> S/ 7</li>
+                    <li><strong>Arroz integral (1kg):</strong> S/ 10</li>
+                    <li><strong>Pasta (500g):</strong> S/ 5</li>
+                    <li><strong>Plátanos (10 unidades):</strong> S/ 8</li>
+                    <li><strong>Manzanas (6 unidades):</strong> S/ 12</li>
+                    <li><strong>Tomates (1kg):</strong> S/ 6</li>
+                    <li><strong>Cebollas (1kg):</strong> S/ 4</li>
+                    <li><strong>Zanahorias (1kg):</strong> S/ 5</li>
+                    <li><strong>Espinacas (2 atados):</strong> S/ 8</li>
+                    <li><strong>Ajo (2 cabezas):</strong> S/ 3</li>
+                    <li><strong>Aceite de oliva (250ml):</strong> S/ 15</li>
+                    <li><strong>Sal, especias básicas:</strong> S/ 8</li>
+                    <li><strong>Huevos (12 unidades):</strong> S/ 10</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSEJOS -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div class="tips-box">
+                <h3>🌟 Consejos para Ahorrar en Alimentación</h3>
+                <ul style="margin-left: 20px; line-height: 1.8; color: #555;">
+                    <li><strong>Compra a granel:</strong> Los alimentos a granel suelen ser más económicos que los envasados.</li>
+                    <li><strong>Elige productos de temporada:</strong> Las frutas y verduras de temporada son más baratas y frescas.</li>
+                    <li><strong>Planifica tus comidas:</strong> Haz una lista de compras y síguela para evitar compras impulsivas.</li>
+                    <li><strong>Aprovecha las sobras:</strong> Transforma las sobras en nuevas comidas para evitar desperdicios.</li>
+                    <li><strong>Cocina en grandes cantidades:</strong> Prepara porciones grandes y congela para otros días.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CORREGIDO -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">❤️</span>
+                    <h3>OncoRecetas</h3>
+                    <p>Nutrición con corazón</p>
+                    <div class="footer-contact">
+                        <a href="https://wa.me/51952724874" target="_blank" class="footer-whatsapp">
+                            💬 WhatsApp: 952 724 874
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="footer-email">
+                            📧 oncorecetas.lcc@gmail.com
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                        <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                        <li><a href="../index.html#prevencion">Prevención</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Información</h4>
+                    <p>📍 Perú</p>
+                    <p>📧 oncorecetas.lcc@gmail.com</p>
+                    <p>💬 WhatsApp: 952 724 874</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1CH7q8jcSw/" target="_blank" class="social-btn facebook">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@oncorecetas.lcc" target="_blank" class="social-btn tiktok">
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://wa.me/51952724874" target="_blank" class="social-btn whatsapp">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="social-btn email">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 OncoRecetas. Todos los derechos reservados.</p>
+                <p style="margin-top: 8px; font-size: 0.9rem; opacity: 0.7;">
+                    💙 Proyecto creado con amor para acompañarte en tu camino hacia la salud
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>

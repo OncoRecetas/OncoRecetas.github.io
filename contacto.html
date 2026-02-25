@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📞 Contacto | OncoRecetas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .contact-hero {
+            background: linear-gradient(rgba(231, 29, 54, 0.9), rgba(184, 20, 40, 0.9)), url('https://images.unsplash.com/photo-1584308972272-9cf4b93c8c9e?ixlib=rb-4.0.3') center/cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .contact-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .contact-info,
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info h2,
+        .contact-form h2 {
+            color: #E71D36;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .contact-method {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            border-left: 4px solid #E71D36;
+        }
+        
+        .contact-method h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .contact-method p {
+            margin: 8px 0;
+            color: #555;
+        }
+        
+        .contact-method a {
+            display: inline-block;
+            margin: 10px 0;
+            color: #E71D36;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method a:hover {
+            color: #C62828;
+            text-decoration: underline;
+        }
+        
+        .whatsapp-link,
+        .email-link {
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none !important;
+            font-weight: 600;
+        }
+        
+        .whatsapp-link {
+            background: #25D366;
+        }
+        
+        .whatsapp-link:hover {
+            background: #128C7E !important;
+        }
+        
+        .email-link {
+            background: #EA4335;
+        }
+        
+        .email-link:hover {
+            background: #D32F2F !important;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #E71D36;
+            box-shadow: 0 0 0 3px rgba(231, 29, 54, 0.2);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background: #E71D36;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .submit-btn:hover {
+            background: #C62828;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .form-note {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info,
+            .contact-form {
+                padding: 25px;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <h1>OncoRecetas</h1>
+                <p class="tagline">Nutrición con corazón</p>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#cancer">Por tipo de cáncer</a></li>
+                    <li><a href="index.html#vegano">Opciones veganas</a></li>
+                    <li><a href="index.html#prevencion">Prevención</a></li>
+                    <li><a href="index.html#recetas">Todas las recetas</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="contact-hero">
+        <h1>📞 Contáctanos</h1>
+        <p>Estamos aquí para escucharte, responder tus dudas y acompañarte en tu camino hacia la salud</p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" style="background-color: white; padding-top: 0;">
+        <div class="container">
+            <div class="contact-container">
+                <!-- INFORMACIÓN DE CONTACTO -->
+                <div class="contact-info">
+                    <h2>📱 Información de Contacto</h2>
+                    
+                    <div class="contact-method">
+                        <h3>💬 WhatsApp</h3>
+                        <p>Para consultas rápidas y directas</p>
+                        <a href="https://wa.me/51952724874" target="_blank" class="whatsapp-link">
+                            📱 952 724 874
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 8px;">
+                            Horario: Lunes a Viernes, 9:00 AM - 6:00 PM
+                        </p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3>📧 Correo Electrónico</h3>
+                        <p>Para mensajes más detallados</p>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="email-link">
+                            📧 oncorecetas.lcc@gmail.com
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 8px;">
+                            Te responderemos en 24-48 horas
+                        </p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3>📍 Ubicación</h3>
+                        <p>Perú</p>
+                        <p style="font-size: 0.9rem;">
+                            Atendemos consultas de todo el país
+                        </p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3>💡 ¿Qué puedes consultar?</h3>
+                        <ul style="margin-left: 20px; margin-top: 10px; color: #555;">
+                            <li>Dudas sobre recetas específicas</li>
+                            <li>Sugerencias de nuevas recetas</li>
+                            <li>Compartir tu testimonio</li>
+                            <li>Colaboraciones y alianzas</li>
+                            <li>Consultas sobre nutrición</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- FORMULARIO -->
+                <div class="contact-form">
+                    <h2>📝 Envíanos un Mensaje</h2>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre completo *</label>
+                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required placeholder="tuemail@gmail.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Teléfono (opcional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="XXX XXX XXX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="consulta">Consulta sobre recetas</option>
+                                <option value="testimonio">Compartir testimonio</option>
+                                <option value="sugerencia">Sugerencia de receta</option>
+                                <option value="colaboracion">Colaboración/alianza</option>
+                                <option value="otro">Otro tema</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" required placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">Enviar Mensaje 📤</button>
+                        
+                        <p class="form-note">
+                            * Todos los campos marcados con asterisco (*) son obligatorios
+                        </p>
+                        
+                        <div id="successMessage" class="success-message">
+                            ✅ ¡Mensaje enviado! Te contactaremos pronto.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">❤️</span>
+                    <h3>OncoRecetas</h3>
+                    <p>Nutrición con corazón</p>
+                    <div class="footer-contact">
+                        <a href="https://wa.me/51952724874" target="_blank" class="footer-whatsapp">
+                            💬 WhatsApp: 952 724 874
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="footer-email">
+                            📧 oncorecetas.lcc@gmail.com
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#cancer">Por tipo de cáncer</a></li>
+                        <li><a href="index.html#vegano">Opciones veganas</a></li>
+                        <li><a href="index.html#prevencion">Prevención</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Información</h4>
+                    <p>📍 Perú</p>
+                    <p>📧 oncorecetas.lcc@gmail.com</p>
+                    <p>💬 WhatsApp: 952 724 874</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1CH7q8jcSw/" target="_blank" class="social-btn facebook">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@oncorecetas.lcc" target="_blank" class="social-btn tiktok">
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://wa.me/51952724874" target="_blank" class="social-btn whatsapp">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="social-btn email">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 OncoRecetas. Todos los derechos reservados.</p>
+                <p style="margin-top: 8px; font-size: 0.9rem; opacity: 0.7;">
+                    💙 Proyecto creado con amor para acompañarte en tu camino hacia la salud
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/script.js"></script>
+    <script>
+        // Formulario de contacto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Deshabilitar botón durante envío
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+            
+            // Obtener datos del formulario
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+            
+            // Validar email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Por favor ingresa un correo electrónico válido');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Enviar Mensaje 📤';
+                return;
+            }
+            
+            // Construir mensaje para WhatsApp
+            let whatsappMessage = `🔹 *Nueva consulta desde OncoRecetas* 🔹\n\n`;
+            whatsappMessage += `👤 *Nombre:* ${name}\n`;
+            whatsappMessage += `📧 *Email:* ${email}\n`;
+            if (phone) whatsappMessage += `📱 *Teléfono:* ${phone}\n`;
+            whatsappMessage += `📋 *Asunto:* ${subject}\n\n`;
+            whatsappMessage += `💬 *Mensaje:*\n${message}`;
+            
+            // Codificar y abrir WhatsApp
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const whatsappUrl = `https://wa.me/51952724874?text=${encodedMessage}`;
+            
+            // Simular envío (en producción, aquí iría tu backend)
+            setTimeout(() => {
+                // Abrir WhatsApp
+                window.open(whatsappUrl, '_blank');
+                
+                // Mostrar mensaje de éxito
+                successMessage.style.display = 'block';
+                
+                // Resetear formulario
+                this.reset();
+                
+                // Restaurar botón
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Enviar Mensaje 📤';
+                
+                // Ocultar mensaje después de 5 segundos
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

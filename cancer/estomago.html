@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas para Cáncer de Estómago | OncoRecetas</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CORRECCIÓN CRÍTICA: Centrar el título */
+        .cancer-hero {
+            background: linear-gradient(rgba(231, 29, 54, 0.9), rgba(184, 20, 40, 0.9)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') center/cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center; /* ¡ESTO CENTRA TODO! */
+        }
+        
+        .cancer-hero h1 {
+            text-align: center; /* ¡ESTO CENTRA EL TÍTULO! */
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER CORREGIDO -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <h1>OncoRecetas</h1>
+                <p class="tagline">Nutrición con corazón</p>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                    <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                    <li><a href="../index.html#prevencion">Prevención</a></li>
+                    <li><a href="../index.html#recetas">Todas las recetas</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO CORREGIDO (¡CENTRADO!) -->
+    <section class="cancer-hero">
+        <h1>Recetas para Cáncer de Estómago</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 15px auto;">
+            Texturas suaves y alimentos fáciles de digerir para proteger tu estómago
+        </p>
+    </section>
+
+    <!-- INFORMACIÓN -->
+    <section class="section">
+        <div class="container">
+            <div class="tips-box">
+                <h3>💡 ¿Por qué estas recetas?</h3>
+                <p style="line-height: 1.8;">
+                    El cáncer de estómago puede causar dolor, náuseas, vómitos y dificultad para digerir alimentos. 
+                    Se recomienda una dieta con <strong>texturas suaves</strong>, 
+                    <strong>bajo en fibra</strong>, <strong>poco picante</strong> y 
+                    <strong>fácil de digerir</strong> para reducir la irritación y 
+                    facilitar la absorción de nutrientes.
+                </p>
+            </div>
+            
+            <div class="tips-box">
+                <h3>📋 Recomendaciones Nutricionales</h3>
+                <ul style="margin-left: 20px; line-height: 1.8; color: #555;">
+                    <li><strong>Texturas suaves:</strong> Purés, sopas y alimentos bien cocidos.</li>
+                    <li><strong>Bajo en fibra:</strong> Evita fibra insoluble en días de malestar.</li>
+                    <li><strong>Poco picante:</strong> Evita especias fuertes, chile y pimienta.</li>
+                    <li><strong>Bajas grasas:</strong> Grasas difíciles de digerir pueden causar molestias.</li>
+                    <li><strong>Pequeñas porciones:</strong> Comidas frecuentes y pequeñas para no sobrecargar el estómago.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECETAS -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-family: 'Poppins', sans-serif; color: #E71D36; margin-bottom: 40px;">
+                🍽️ Recetas Recomendadas
+            </h2>
+            
+            <div class="recipes-grid">
+                <!-- Receta 1 -->
+                <div class="recipe-card" data-price="economico" data-cancer="estomago" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🥤 Batido Anti-Náuseas</h3>
+                        <span class="price-tag economico">S/ 5.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 5 min • 👥 1 porción • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Con jengibre y plátano. Ideal para momentos difíciles.
+                    </p>
+                    <a href="../recetas/batido-anti-nauseas.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <!-- Receta 2 -->
+                <div class="recipe-card" data-price="economico" data-cancer="estomago" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🍲 Sopa de Lentejas Energética</h3>
+                        <span class="price-tag economico">S/ 7.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 30 min • 👥 4 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Perfecta para días sin mucho apetito. Rica en proteínas y hierro.
+                    </p>
+                    <a href="../recetas/sopa-lentejas.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <!-- Receta 3 -->
+                <div class="recipe-card" data-price="economico" data-cancer="estomago" data-vegano="no">
+                    <div class="recipe-header">
+                        <h3>🥣 Avena con Plátano</h3>
+                        <span class="price-tag economico">S/ 4.00 💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 10 min • 👥 1 porción</p>
+                    <p class="recipe-desc">
+                        Desayuno energético y fácil de digerir.
+                    </p>
+                    <a href="../recetas/avena-platano.html" class="btn-detail">Ver receta →</a>
+                </div>
+
+                <!-- Receta 4 -->
+                <div class="recipe-card" data-price="balanceado" data-cancer="estomago" data-vegano="si">
+                    <div class="recipe-header">
+                        <h3>🍵 Sopa de Miso con Vegetales</h3>
+                        <span class="price-tag balanceado">S/ 22.00 💲💲</span>
+                    </div>
+                    <p class="recipe-meta">⏱️ 25 min • 👥 3 porciones • 🌱 Vegana</p>
+                    <p class="recipe-desc">
+                        Caliente, reconfortante y rica en probióticos.
+                    </p>
+                    <a href="../recetas/sopa-miso.html" class="btn-detail">Ver receta →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSEJOS -->
+    <section class="section">
+        <div class="container">
+            <div class="tips-box">
+                <h3>🌟 Consejos Adicionales</h3>
+                <ul style="margin-left: 20px; line-height: 1.8; color: #555;">
+                    <li><strong>Licúa las sopas:</strong> Para obtener una textura más suave y fácil de digerir.</li>
+                    <li><strong>Evita alimentos ácidos:</strong> Cítricos, tomates y vinagre pueden irritar el estómago.</li>
+                    <li><strong>Comidas tibias:</strong> Evita alimentos muy calientes o muy fríos.</li>
+                    <li><strong>Mastica bien:</strong> Ayuda a la digestión y reduce la carga en el estómago.</li>
+                    <li><strong>Consulta con tu médico:</strong> Antes de hacer cambios significativos en tu dieta.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CORREGIDO -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">❤️</span>
+                    <h3>OncoRecetas</h3>
+                    <p>Nutrición con corazón</p>
+                    <div class="footer-contact">
+                        <a href="https://wa.me/51952724874" target="_blank" class="footer-whatsapp">
+                            💬 WhatsApp: 952 724 874
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="footer-email">
+                            📧 oncorecetas.lcc@gmail.com
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html#cancer">Por tipo de cáncer</a></li>
+                        <li><a href="../index.html#vegano">Opciones veganas</a></li>
+                        <li><a href="../index.html#prevencion">Prevención</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Información</h4>
+                    <p>📍 Perú</p>
+                    <p>📧 oncorecetas.lcc@gmail.com</p>
+                    <p>💬 WhatsApp: 952 724 874</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1CH7q8jcSw/" target="_blank" class="social-btn facebook">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@oncorecetas.lcc" target="_blank" class="social-btn tiktok">
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://wa.me/51952724874" target="_blank" class="social-btn whatsapp">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:oncorecetas.lcc@gmail.com" class="social-btn email">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 OncoRecetas. Todos los derechos reservados.</p>
+                <p style="margin-top: 8px; font-size: 0.9rem; opacity: 0.7;">
+                    💙 Proyecto creado con amor para acompañarte en tu camino hacia la salud
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>
